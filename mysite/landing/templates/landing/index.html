@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+{% load static %}
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <title>Yeehee :)</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo"><a href="#">_FEELINGS></a></div>
+      <ul class="menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#"></a></li>
+        <li><a href="{% url 'thoughts' %}">Thoughts</a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="text-content">
+        <div class="imgBox">
+            <img src="{% static 'images/'%}" alt="">
+            <div class="heart"></div>
+        </div>
+      <h2>Its a tale,<br>It happened one summer.</h2>
+      <h2 class="post"><span class="typing-text"></span></h2>
+    </div>
+
+  </header>
+
+
+
+  <!-- type.js cdn link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+
+<script>
+
+    var type = new Typed('.typing-text',{
+      strings : [ 'I honestly cannot get enough of you.', 'You are gorgeous!', 'When I hug you, I really feel like the luckiest man alive, Yeehee!',
+      'You are truly beautiful.', 'I might be good in graphics, but you, you are a piece of art already ROFL.','I find pieces of you in every song.',
+      'You are the cause of my Euphoria', 'I cannot even express, how much you mean to me and how I would have been without you...','I really love staring in your eyes haha.',
+      ''
+    ],
+        typeSpeed: 100,
+        loop:true
+    });
+
+    let themeColor = document.querySelectorAll('.theme-toggler span');
+    themeColor.forEach(color => color.addEventListener('click', () =>{
+        let background = color.style.background;
+        document.querySelector('body').style.background = background;
+    }));
+
+</script>
+
+</body>
+</html>
